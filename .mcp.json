@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "jack-and-jill": {
+      "type": "http",
+      "url": "https://platform.jackandjill.ai/mcp/marketplace/v1/"
+    }
+  }
+}
