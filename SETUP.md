@@ -8,7 +8,7 @@ description: Connect the Jack & Jill plugin to the right Jill organization and v
 The plugin includes the Jack & Jill remote MCP server. It uses OAuth, so never ask the user to paste an API key or access token.
 
 1. Enable the plugin and open its **jack-and-jill** connector.
-2. Choose **Connect** or **Sign in** when Claude asks.
+2. Choose **Connect** or **Sign in** when the host asks.
 3. Sign in to Jill and approve the organization that owns the hiring work.
 4. Call `whoami`.
 5. Show the returned organization name and ask the user to confirm it if their request did not already identify the organization.
