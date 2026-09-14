@@ -1,12 +1,20 @@
 # Submit to OpenAI
 
-OpenAI supports direct conversion of Claude Code plugins. This repository can supply the skills archive for a plugin backed by the existing Jack & Jill MCP server.
+OpenAI supports direct conversion of Claude Code plugins. This directory is the skills archive for a plugin backed by the existing Jack & Jill MCP server.
 
 Official guide: https://developers.openai.com/plugins/guides/submit-claude-plugin
 
 ## Package the archive
 
-Create the archive from a clean tagged or committed revision so hidden manifest files are included:
+This directory is the archive root. Hidden `.claude-plugin` must be included.
+
+From `marketplace_plugin/` in ai-recruiter:
+
+```bash
+git archive --format=zip --output jack-and-jill-plugin.zip HEAD:marketplace_plugin
+```
+
+From a clone of [jack-and-jill-plugin](https://github.com/Jack-and-Jill-AI/jack-and-jill-plugin):
 
 ```bash
 git archive --format=zip --output jack-and-jill-plugin.zip HEAD

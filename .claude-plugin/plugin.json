@@ -2,8 +2,8 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "jack-and-jill-plugin",
   "displayName": "Jack & Jill",
-  "version": "0.1.1",
-  "description": "Work hiring assignments from research and candidate search through shortlist feedback and consent-gated introductions.",
+  "version": "0.1.2",
+  "description": "Work hiring assignments from research and candidate search through in-host review, shortlist feedback, and consent-gated introductions.",
   "author": {
     "name": "Jack & Jill",
     "email": "support@jackandjill.ai",

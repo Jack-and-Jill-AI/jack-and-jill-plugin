@@ -24,16 +24,16 @@ Ask about:
 - the business outcome behind the hire;
 - examples of people the principal considers strong or nearly right.
 
-Use search statistics to show the cost of a constraint. Ask whether an expensive constraint is a requirement or preference rather than silently loosening it.
+Use two searches — one open, one with the constraint in `hard_filters` — to show the cost of a fact the index can enforce. Ask whether an expensive constraint is a requirement or preference rather than silently loosening it.
 
 ## Maintain the assignment contexts
 
 - `shared`: the role and company claims a candidate may see.
 - `private`: confidential constraints, compensation detail, and the real evaluation bar.
 - `research`: sourced company, role, market, and team findings.
-- `plan`: search queries, filters, ranking logic, references, funnel, and review cadence.
+- `plan`: criteria per archetype, hard filters, optional exemplars, funnel, review cadence, the daily-pass hour, and a base-path query only if v2 was weaker.
 - `working`: what happened, what remains uncertain, and what comes next.
 
 Candidate messages are moderated against `shared`. If an outbound claim is true and important but missing there, revise `shared` before writing the message.
 
-Search is ready when the principal could explain why each planned filter is a real must-have. Presentation is ready when each shortlisted candidate has profile-backed evidence and an honest open question.
+Search is ready when the user has confirmed the criteria — or the last change is a trivial tweak they are already clearly in favour of — and could explain why each planned criterion and hard filter is a real must-have. Presentation is ready when each shortlisted candidate has profile-backed evidence and an honest open question.

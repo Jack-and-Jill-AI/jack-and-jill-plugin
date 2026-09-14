@@ -11,7 +11,7 @@ Jack & Jill is the durable memory. Local notes and conversation history are only
 
 ## Recover state
 
-1. Call `list_notifications` from the last known sequence. Note completed tasks and new feedback.
+1. Call `list_notifications` from the last known sequence. Note completed tasks, feedback, and intro events. If a candidate has consented, finish that introduction before rerunning search.
 2. Call `list_assignments` and identify the assignment.
 3. Read `working`, `research`, `plan`, `shared`, and `private` with `get_context` as needed.
 4. Read `assignment_events` after the last known sequence.
