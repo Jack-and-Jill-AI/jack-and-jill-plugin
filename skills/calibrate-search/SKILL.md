@@ -1,6 +1,6 @@
 ---
 name: calibrate-search
-description: Improve Jack & Jill filters and rankers when samples, scores, or principal feedback disagree with the intended hiring bar.
+description: Improve Jack & Jill criteria, hard filters, and base-path instruments when samples, scores, or principal feedback disagree with the intended hiring bar.
 ---
 
 # Calibrate search
@@ -38,9 +38,8 @@ Read feedback through `list_notifications`, `match_get`, and `assignment_events`
 
 Trace the discrepancy to one place:
 
-- the search query;
-- a filter's evidence question or threshold;
-- the ranker's fit and trade-offs;
-- a preference incorrectly treated as a hard requirement.
+- a criterion's key, title, or summary (the default v2 instrument);
+- a `hard_filters` section that should have been a preference, or a preference that belongs in `hard_filters`;
+- on the base path, the search query, a Filter's evidence question, or the Ranker's fit.
 
 Revise that element, explain why in the write's `intent`, update the assignment plan, and run the next pass. Calibration is complete when a feedback round no longer changes an instrument.

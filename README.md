@@ -1,11 +1,15 @@
-# Jack & Jill plugin
+# Jack & Jill marketplace plugin
 
-This plugin connects ChatGPT, Codex, Cowork, and Claude Code to the Jack & Jill candidate network. Its skills teach the model how to work a hiring assignment from research through a reviewed shortlist and consent-gated introduction.
+Skills archive for hosts that connect to `https://platform.jackandjill.ai/mcp/marketplace/v1/`. Zip this directory for ChatGPT and Codex. Claude Code and Cowork can load it with `--plugin-dir marketplace_plugin`.
+
+The public copy is [jack-and-jill-plugin](https://github.com/Jack-and-Jill-AI/jack-and-jill-plugin). Turret's sandbox still curls that repo (`PLATFORM_PLUGIN_COMMIT` in `turret/worker/src/sandbox/lifecycle/platform-plugin.ts`). Publish this tree there before bumping the pin.
+
+Marketplace MCP ships tools only. These files are how ChatGPT, Claude, and Cursor learn the workflow. They teach the marketplace contract (`hard_filters`, `review_matches`, `list_notifications`) and stay off the legacy `/mcp/` handbook and v2 surfaces.
 
 ## What it includes
 
 - The production Jack & Jill remote MCP server, connected through OAuth.
-- Static, provider-neutral skills for assignment setup, research, candidate search, calibration, reports, feedback, and introductions.
+- Static, provider-neutral skills for assignment setup, research, hard-filtered candidate search, calibration, in-host review, the daily pass, and consent-gated introductions.
 - No API keys, customer data, executable hooks, subagents, or local software dependencies.
 
 ## Connect
@@ -27,6 +31,8 @@ claude plugin validate . --strict
 claude --plugin-dir .
 ```
 
+From ai-recruiter, point `--plugin-dir` at this directory (`marketplace_plugin`).
+
 ## OpenAI
 
 OpenAI accepts Claude Code plugin archives and converts `.claude-plugin/plugin.json` to `.codex-plugin/plugin.json`. Use a **With MCP** submission so the same skills are available in ChatGPT and Codex.
@@ -34,6 +40,12 @@ OpenAI accepts Claude Code plugin archives and converts `.claude-plugin/plugin.j
 The OpenAI submission registers and scans the production MCP endpoint separately. It does not rely on this repository's `.mcp.json` as the server registration.
 
 See [OPENAI.md](OPENAI.md) for the packaging and submission steps.
+
+## Check the contract
+
+```bash
+./scripts/check-skills.sh
+```
 
 ## Support
 
